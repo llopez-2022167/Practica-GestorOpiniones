@@ -1,6 +1,6 @@
 import { Schema,model } from "mongoose";
 
-const publictionSchema = Schema({
+const publicationSchema = Schema({
     title: {
         type: String,
         require: true
@@ -18,4 +18,4 @@ const publictionSchema = Schema({
     versionKey: false
 })
 
-export default model('publications',publictionSchema)
+export default model('publication',publicationSchema)

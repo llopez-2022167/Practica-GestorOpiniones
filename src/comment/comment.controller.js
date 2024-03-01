@@ -8,14 +8,12 @@ import { checkUpdate } from '../../utils/validator.js'
 // Controlador para agregar un nuevo comentario
 export const add = async (req, res) => {
     try {
-        // Extraer los datos del cuerpo de la solicitud
-        let data = req.body;
-        
+       
+        let data = req.body; // Extraer los datos del cuerpo de la solicitud
+
         // Extraer el ID de usuario del objeto de solicitud
         let uid = req.user._id;
-        
-        // Asignar el ID de usuario al comentario
-        data.user = uid;
+        data.user = uid;// Asignar el ID de usuario al comentario
         
         // Verificar si se enviaron todos los parámetros necesarios
         if (!data.publication || !data.comment || !data.user) 
@@ -39,15 +37,12 @@ export const add = async (req, res) => {
 // Controlador para actualizar un comentario existente
 export const update = async (req, res) => {
     try {
-        // Extraer los datos del cuerpo de la solicitud
         let data = req.body;
         // Extraer el ID de usuario del objeto de solicitud
         let uid = req.user._id;     
-        // Verificar si se proporcionaron datos válidos para la actualización
         let updated = checkUpdate(data, id);   
         // Buscar el comentario en la base de datos
         let comment = await Comment.findOne({ _id: id, user: uid });   
-        // Verificar si el comentario existe y si el usuario tiene permiso para actualizarlo
         if (!comment) 
             return res.status(404).send({ message: 'Comment not found or you are not authorized to updated it' });  
         // Verificar si se pueden actualizar los datos proporcionados
@@ -70,11 +65,8 @@ export const update = async (req, res) => {
 // Controlador para eliminar un comentario
 export const deleted = async (req, res) => {
     try {
-        // Extraer el ID del comentario de los parámetros de la solicitud
         let { id } = req.params;
-        // Extraer el ID de usuario del objeto de solicitud
         let uid = req.user._id;
-        // Verificar si el comentario existe y si el usuario tiene permiso para eliminarlo
         let comment = await Comment.findOne({ _id: id, user: uid });
         if (!comment)
             return res.status(404).send({ message: 'Comment not found or you are not authorized to delete it' });

@@ -1,0 +1,195 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "GestionDeOpiniones",
+    "dateExported": "2024-03-01T23:47:01.405Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "5c348b2a-6253-42d6-ad46-4c98bb9d2915",
+            "name": "user",
+            "containerId": "",
+            "created": "2024-03-01T05:00:35.596Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "42ef6895-a774-4d42-8dd3-9367e5203ecc",
+            "name": "comments",
+            "containerId": "",
+            "created": "2024-03-01T05:08:04.311Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "98179df1-ed27-4152-aae2-2b5f8ce13ffb",
+            "name": "publication ",
+            "containerId": "",
+            "created": "2024-03-01T23:30:08.848Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "2cd0e10b-e5ed-4013-b281-ec9a3ba7bab1",
+            "colId": "ef44fdea-1dac-486b-8ea8-12a259987184",
+            "containerId": "5c348b2a-6253-42d6-ad46-4c98bb9d2915",
+            "name": "llogin",
+            "url": "localhost:2656/user/login",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2024-03-01T21:23:56.192Z",
+            "modified": "2024-03-01T22:17:01.731Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "llopez"
+                    },
+                    {
+                        "name": "email",
+                        "value": "llopez@gmail.com"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f13a5897-3ec7-4a71-b91d-76298ed4fcc2",
+            "colId": "ef44fdea-1dac-486b-8ea8-12a259987184",
+            "containerId": "5c348b2a-6253-42d6-ad46-4c98bb9d2915",
+            "name": "signUp",
+            "url": "localhost:2656/user/add",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2024-03-01T21:43:31.410Z",
+            "modified": "2024-03-01T22:09:26.957Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "lisandro"
+                    },
+                    {
+                        "name": "username",
+                        "value": "llopez"
+                    },
+                    {
+                        "name": "email",
+                        "value": "llopez@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "Guatemala"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "798f610f-8e2c-493c-9ac1-cba7849855a0",
+            "colId": "ef44fdea-1dac-486b-8ea8-12a259987184",
+            "containerId": "5c348b2a-6253-42d6-ad46-4c98bb9d2915",
+            "name": "login2",
+            "url": "localhost:2656/user/login",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2024-03-01T21:49:47.558Z",
+            "modified": "2024-03-01T21:50:59.235Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "name",
+                        "value": "Fabricio Lopez"
+                    },
+                    {
+                        "name": "username",
+                        "value": "Flopez"
+                    },
+                    {
+                        "name": "email",
+                        "value": "Flopez@gmail.com"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345678"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "799dee24-d158-428b-8d2d-c8abe65f3db9",
+            "colId": "ef44fdea-1dac-486b-8ea8-12a259987184",
+            "containerId": "5c348b2a-6253-42d6-ad46-4c98bb9d2915",
+            "name": "edit",
+            "url": "localhost:2656/user/edit/65e2529aefa3c88a06ae6523",
+            "method": "PUT",
+            "sortNum": 160000,
+            "created": "2024-03-01T22:23:08.944Z",
+            "modified": "2024-03-01T22:53:39.151Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "llopez"
+                    },
+                    {
+                        "name": "email",
+                        "value": "llopez@gmail.com"
+                    },
+                    {
+                        "name": "Password",
+                        "value": "Guatemala"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "5877d334-f7e4-4997-ac97-fcdf02773fbf",
+            "colId": "ef44fdea-1dac-486b-8ea8-12a259987184",
+            "containerId": "98179df1-ed27-4152-aae2-2b5f8ce13ffb",
+            "name": "add",
+            "url": "localhost:2656/publication/add",
+            "method": "POST",
+            "sortNum": 180000,
+            "created": "2024-03-01T23:30:23.206Z",
+            "modified": "2024-03-01T23:42:40.079Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "title",
+                        "value": "Hola"
+                    },
+                    {
+                        "name": "description",
+                        "value": "Romantico"
+                    },
+                    {
+                        "name": "user",
+                        "value": "65e2529aefa3c88a06ae6523"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}

@@ -6,7 +6,6 @@ import { config } from "dotenv"
 import publicationRoutes from '../src/publication/publications.routes.js'
 import commentRoutes from '../src/comment/comment.routes.js'
 import userRoutes from '../src/user/user.routes.js'
-import categoryRoutes from '../src/category/category.routes.js'
 
 const app = express()
 config();
@@ -22,7 +21,6 @@ app.use(morgan('dev')) //Logs de solicitudes al servidor HTTP
 app.use('/publication', publicationRoutes)
 app.use('/user', userRoutes)
 app.use('/comment', commentRoutes)
-app.use('/category',categoryRoutes )
 
 export const initServer = ()=>{
     app.listen(port)
